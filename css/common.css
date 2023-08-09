@@ -1,0 +1,226 @@
+@charset "utf-8";
+/* 인코딩 위에는 절대 주석 쓰면 안됨 */
+
+/* common.css : 모든 페이지에 적용될 base작업과 header와 footer스타일을 작성할 CSS */
+
+
+/* 사용되는 폰트 : 구글웹폰트에 있으면 사용, 없으면 서버폰트(@font-face)로 처리 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+
+
+
+
+
+/* base 작업 : 브라우저 초기화 작업 */
+*{
+    padding: 0; margin: 0;
+    font-family: 'GmarketSans','Noto Sans KR';
+    color: #666; 
+    box-sizing: border-box;  
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none; 
+}
+img{
+    display: block;
+} 
+table{
+    border-spacing: 0;
+    border-collapse : collapse; 
+}
+fieldset{
+    border: none; 
+}
+button{
+    cursor: pointer; 
+}
+h1,h2{
+    color: #93272c; font-size: 48px; 
+    margin-bottom: 20px;
+}
+
+
+
+/* inner_wrap */
+
+.inner_wrap{
+    width: 1280px; height: 100%;  margin: 0 auto; 
+}
+
+
+/* header */
+header{
+    width: 100%; min-width: 1280px; height: 180px; margin: 0 auto;
+    background-color: #fff;
+}
+
+
+
+.top_logo{
+    width: 1280px; height: 140px; margin: 0 auto; 
+    position: relative;
+}
+.top_logo .logo{ width: 200px; margin: 0 auto; padding-top: 20px;;}
+.top_logo .logo img{ width: 100%; }
+.top_logo ul{
+    position: absolute; top: 0; right: 0;
+    display: flex; justify-content: flex-end; 
+}
+.top_logo li{
+    margin-left: 30px; line-height: 20px; margin-top: 20px;
+    font-size: 12px; color: #666;
+}
+.top_logo ul img{
+    width: 20px; height: 20px;
+}
+
+
+/* Main nav */
+.gnb{
+    position: relative;
+    width: 1280px; height: 40px; margin: 0 auto;
+}
+.gnb > ul{
+    height: 100%;
+     text-align: center; 
+}
+.gnb > ul > li{
+    float: left;
+    width: 200px; height: 100%;
+   padding: 10px 30px;
+   position: relative;
+}
+.gnb > ul > li::after{
+    position: absolute; bottom: 0px; left: 0;
+    content: '';
+    width: 100%; height:3px; background-color: #93272c; opacity: 0; transition: .8s; transform: scaleX(0);
+}
+.gnb ul > li:hover::after{
+    content: '';
+    width: 100%; height:3px; background-color: #93272c; opacity: 1; transform: scaleX(1) ;
+}
+.gnb > ul > li > a{
+    font-size: 14px; color: #333; font-weight: bold;
+}
+
+
+
+
+/* sub nav */
+.gnb .subnav{
+    display: none; 
+    box-sizing: border-box;
+    width: 200px; height: 300px; padding-top: 20px;
+    position: absolute; 
+    z-index: 1010; 
+    top: 40px; left: 0; 
+ }
+.gnb .subnav > li {position: relative; height: 30px; width: 100%;}
+.gnb .subnav a{
+    position: relative; color: #ededed;
+    display: block; width: 100%; height: 100%;  line-height: 25px; font-size: 12px;
+    }
+.gnb .subnav a:hover{ color: #fff; font-size: 13px;}
+.gnb .subnav a:hover::after, .gnb .subnav.active a:hover::after{
+    position: absolute; top: 0; right: 40px;
+    content: '+'; width: 3px; height: 3px; color: #fff;
+}
+
+
+
+
+
+
+/* subnav 배경 subbg */
+.subbg{
+    display: none;
+    width: 100%; height: 300px;
+    background-color: #93272c; opacity: .7;
+    position: absolute; top: 180px; left: 0;
+    z-index: 1000;
+ }
+
+
+
+
+/* active */
+header.active{
+    position: fixed; z-index: 5000;
+    height: 60px; background-color: #93272c; 
+    transition: .2s ease-in; 
+}
+header.active .top_logo{ display: none;}
+header.active .gnb {height: 60px; }
+header.active .gnb a{ color: #fff; line-height: 40px;}
+header.active .gnb li::after{ background-color: white;}
+header.active .subbg { background-color: #000; top: 60px;}
+header.active .gnb .subnav {top: 60px;}
+
+
+
+
+/* footer */
+footer{
+    position: relative;
+    width: 100%; min-width: 1280px; height: 290px; padding: 40px 0 65px; box-sizing: border-box;
+    background-color: #ccc;
+}
+footer .information{ display: flex; }
+footer .information li{ padding: 10px; }
+footer .information li::after{ content: '·'; position: relative; left: 10px;}
+footer .information li:last-child:after{ display: none;}
+
+footer .address{ height: 100%; padding-top:60px; line-height: 30px;}
+footer #family_site{
+    position: absolute; top:40px; left: calc(50% + 350px);
+    width: 250px; height: 40px; border-radius: 5px; border: none;
+    color: #333; padding: 0 10px;
+}
+footer #family_site:focus{ border: none;}
+
+
+
+
+
+/* family site */
+footer .family_site{
+    position: absolute; top: 30px; right: calc(50% - 600px);
+    width: 250px; height: 40px; margin: 10px 0; 
+}
+footer .family_site button{
+    width: 100%; height: 100%;
+    border: none; border-radius: 5px;
+}
+footer .family_site button .default{
+    float: left; padding-left: 20px;
+    color: #333; font-size: 14px;}
+footer .family_site button .down_icon{
+    float: right; margin-right: 20px;
+    color: #333; font-size: 14px; 
+    transition: .2s;
+}
+footer .family_site button.active .down_icon{
+    margin-right: 20px; 
+    transform: rotate(180deg);
+}
+footer .transparent{
+    display: none;
+    width: 100%; height: 190px; padding-top: 10px;
+}
+footer .transparent ul{
+    width: 100%; height: 180px;  padding: 20px 10px; 
+    background-color: #ededed; border-radius: 5px; box-shadow: 2px 2px 2px #000;
+}
+footer .family_site li{
+    width: 100%; height: 30px;
+}
+footer .family_site a{
+    padding: 10px; 
+    font-size: 14px;  color: #333;
+}
+footer .family_site a:hover{ color: #ccc;}

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex,nofollow">
+        <!-- IE가 html5를 인식하도록 도와주는 메타태그 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=1280" /><!-- dothome에서 끝에 사이즈 안맞을때 넣음! -->
+        <title>Tous Les Jours</title>
+        <!-- 스타일시트 -->
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/main.css">
+        <!-- 제이쿼리 플러그인 -->
+        <script src="js/jquery-3.6.4.min.js"></script>
+        <script src="js/swiper-bundle.min.js"></script> 
+        <!-- 제작 js/css -->
+        <script src="js/common.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- 파비콘아이콘 -->
+        <link rel="shortcut icon" href="images/common/favicon.gif">
+        <link rel="apple-touch-icon" href="images/common/icon_favicon180x180.gif" sizes="180x180">
+        <link rel="shortcut icon" href="images/common/192x192.gif" sizes="192x192"> 
+    </head>
+    <body>
+        
+         <!-- popup -->
+         <div class="popup"><!-- 전체검은배경처리 -->
+            <div class="popup_wrap"><!-- 실제팝업영역 -->
+                <div class="p_notice">
+                    <p>
+                        본 사이트는 상업적 목적이 아닌 <span>개인 포트폴리오 용도</span>로
+                        만들어 졌습니다.홈페이지의 일부 내용과 이미지 등은  
+                        그 <span>출처가 따로 있음</span>을 밝힙니다. <br>
+                        본 사이트는 <span>HTML5</span>와 <span>CSS3</span>를 기준으로 하여
+                        크롬, 사파리, 오페라, 파이어폭스, IE9이상의 브라우저에 맞춘 <span>적응형웹 홈페이지</span>입니다.
+                    </p>
+                </div>
+                <div class="p_bottom">
+                    <a href="#">상세정보 바로가기</a>
+                </div>
+                <div class="p_right">
+                    <!-- input, select, textarea태그는 반드시 label태그와 연결되어야 함 -->
+                    <input type="checkbox" id="chk_box">
+                    <label for="chk_box">see no more</label>
+                    <a href="#" title="팝업창 닫기">CLOSE<span class="close1"></span><span class="close2"></span></a>
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <div class="top_logo">
+                <div class="logo"><a href="http://naver.com"><img src="images/common/logo.png" alt="로고"></a></div>
+                <ul>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#"><img src="images/common/magnify.png" alt="검색"></a></li>
+                </ul>
+            </div>
+            <nav class="gnb" >
+                <ul>
+                    <li>
+                       <a href="#" class="mainnav">Brand Story</a>
+                        <ul class="subnav">
+                            <li><a href="#">뚜레쥬르</a></li>
+                            <li><a href="#">뚜레쥬르광고</a></li>
+                            <li><a href="#">재료이야기</a></li>
+                            <li><a href="#">글로벌 뚜레쥬르</a></li>
+                            <li><a href="#">라뜰리에</a></li>
+                            <li><a href="#">착한빵</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="mainnav">Bread</a>
+                        <ul class="subnav">
+                            <li><a href="#">신제품</a></li>
+                            <li><a href="#">빵</a></li>
+                            <li><a href="#">구움과자</a></li>
+                            <li><a href="#">케이크</a></li>
+                            <li><a href="#">샌드위치/간편식</a></li>
+                            <li><a href="#">디저트</a></li>
+                            <li><a href="#">잼/스프레드</a></li>
+                            <li><a href="#">선물세트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="mainnav">Beverage</a>
+                        <ul class="subnav">
+                            <li><a href="#">Coffee</a></li>
+                            <li><a href="#">Non Coffee</a></li>
+                            <li><a href="#">Beverage</a></li>
+                            <li><a href="#">Ice Flakes</a></li>
+                            <li><a href="#">Bottle</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="mainnav">Membership</a>
+                        <ul class="subnav">
+                            <li><a href="#">CJ 멤버쉽</a></li>
+                            <li><a href="#">제휴혜택</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="mainnav">Community</a>
+                        <ul class="subnav">
+                            <li><a href="#">공지</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">Q&A</a></li>
+                            <li><a href="#">가맹문의</a></li>
+                            <li><a href="#">채용안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="mainnav">Reservation</a>
+                        <ul class="subnav">
+                            <li><a href="#">개인 예약/픽업</a></li>
+                            <li><a href="#">케이크 배달</a></li>
+                            <li><a href="#">단체주문</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 제이쿼리 메인네비게이션 배경 -->
+        </header>
+        <main>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/Main/main1.png" alt="main01">
+                    </div>
+                    <div class="swiper-slide"><img src="images/Main/main2.png" alt="main02">
+                    </div>
+                    <div class="swiper-slide"><img src="images/Main/main3.png" alt="main03">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </main>
+        <div class="our_touslesjours">
+            <div class="inner_wrap">
+                <h1><span>our</span> Tous Les Jours</h1>
+                <a>매일매일, Tous Les Jours  매장에서 직접굽는 신선한베이커리 </a>
+
+                <div class="select">
+                    <button>
+                        <span class="default">NEW</span>
+                        <span class="down_icon">▼</span>
+                    </button>
+                    
+        
+                    <div class="gallery">
+                        <div class="tab_box">
+                            <ul class="tab_btn">
+                                <li><a href="#" class="active">NEW</a></li>
+                                <li><a href="#">Best (Bread)</a></li>
+                                <li><a href="#">Best (Cake)</a></li>
+                                <li><a href="#">Best (Beverage)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="best_swiper">
+                    <div class="tab_contents swiper best01 active">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="#"><p>겹겹이 딸기파이</p><img src="images/Best_menu/new01.png" alt="new01"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>그대로 구워먹는 꿀토스트</p><img src="images/Best_menu/new02.png" alt="new02"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>복이가득 앙! 크림단팥</p><img src="images/Best_menu/new03.png" alt="new03"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>산딸기 라떼 롤케이크</p><img src="images/Best_menu/new04.png" alt="new04"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>겹겹이 딸기파이</p><img src="images/Best_menu/new05.png" alt="new01"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>그대로 구워먹는 꿀토스트</p><img src="images/Best_menu/new06.png" alt="new02"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>복이가득 앙! 크림단팥</p><img src="images/Best_menu/new07.png" alt="new03"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>산딸기 라떼 롤케이크</p><img src="images/Best_menu/new08.png" alt="new04"></a></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="tab_contents swiper best02">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="#"><p>겉바속촉 꿀버터 바게트</p><img src="images/Best_menu/bread01.png" alt="bread01"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>겹겹이 연유크림 데니쉬</p><img src="images/Best_menu/bread02.png" alt="bread02"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>생크림 버터스콘</p><img src="images/Best_menu/bread03.png" alt="bread03"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>소금 버터롤</p><img src="images/Best_menu/bread04.png" alt="bread04"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>소금 버터롤</p><img src="images/Best_menu/bread05.png" alt="bread05"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>소금 버터롤</p><img src="images/Best_menu/bread06.png" alt="bread06"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>소금 버터롤</p><img src="images/Best_menu/bread07.png" alt="bread07"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>소금 버터롤</p><img src="images/Best_menu/bread08.png" alt="bread08"></a></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="tab_contents swiper best03">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="#"><p>마담 얼그레이 케이크</p><img src="images/Best_menu/cake01.png" alt="cake01"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>모카 롤 케이크</p><img src="images/Best_menu/cake02.png" alt="cake02"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>백설공주_달콤한 사과</p><img src="images/Best_menu/cake03.png" alt="cake03"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>쁘띠 딸기 마스카포네 티라미수 케이크</p><img src="images/Best_menu/cake04.png" alt="cake04"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>소금 버터롤</p><img src="images/Best_menu/bread05.png" alt="bread05"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>소금 버터롤</p><img src="images/Best_menu/bread06.png" alt="bread06"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>소금 버터롤</p><img src="images/Best_menu/bread07.png" alt="bread07"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>소금 버터롤</p><img src="images/Best_menu/bread08.png" alt="bread08"></a></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="tab_contents swiper best04">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="#"><p>국산팥듬뿍인절미빙수</p><img src="images/Best_menu/beverage01.png" alt="beverage01"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>딸기라떼</p><img src="images/Best_menu/beverage02.png" alt="beverage02"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>딸기밀크티</p><img src="images/Best_menu/beverage03.png" alt="beverage03"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>로얄밀크티</p><img src="images/Best_menu/beverage04.png" alt="beverage04"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>소금 버터롤</p><img src="images/Best_menu/bread05.png" alt="bread05"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>소금 버터롤</p><img src="images/Best_menu/bread06.png" alt="bread06"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>소금 버터롤</p><img src="images/Best_menu/bread07.png" alt="bread07"></a></div>
+                            <div class="swiper-slide"><a href="#"><p>소금 버터롤</p><img src="images/Best_menu/bread08.png" alt="bread08"></a></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    
+                </div>
+             </div>
+        </div>
+        <div class="icon_box">
+            <div class="inner_wrap">
+                <ul>
+                    <li><a href="#"><div>가까운 매장찾기</div></a></li>
+                    <li><a href="#"><div>온라인 쇼핑몰</div></a></li>
+                    <li><a href="#"><div>예약/픽업<br>(개인·단체)</div></a></li>
+                    <li><a href="#"><div>제휴할인</div></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="taste">
+                <div class="taste_box">
+                    <div class="left_taste">
+                        <a href="#" class="teast_text_wrap">
+                            <h1>Light</h1>
+                            <p>가벼우면서 데일리로 먹기 좋은 담백함</p>
+                        </a>
+                    </div>
+                    <div class="right_taste">
+                        <a href="#" class="teast_text_wrap">
+                            <h1>Sweet</h1>
+                            <p>달달한게 필요할 때 기분좋은 즐거움</p>
+                        </a>
+                    </div>
+            </div>
+        </div>
+        <div class="event">
+            <div class="inner_wrap">
+                <h2>Event</h2>
+                <p>뚜레쥬르에서 진행중인 다양한 이벤트를 소개합니다.</p>
+                <button>이벤트 보기</button>
+            </div>
+        </div>
+        <div class="experience">
+            <div class="inner_wrap">
+                <h1>Experience, Tour Les Jours</h1>
+                <a>Instagram,  다양한 뚜레쥬르를 경험해보세요</a>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="images/exprience/contents1.PNG" alt="sns이미지_1">
+                                <p>#딸기빵 #딸기시즌<br>#딸기듬뿍우유브레드</p> <!-- ******이미지교체 :딸기듬뿍우유브레드 -->
+                            </figure>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="images/exprience/contents2.PNG" alt="sns이미지_2">
+                                <p>#꿀토스트식빵 #꿀토스트<br>#뚜쥬식빵</p>
+                            </figure>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="images/exprience/contents3.PNG" alt="sns이미지_3">
+                                <p>#꿀토스트식빵 #꿀토스트<br>#프리퀀시 #뚜쥬앱</p>
+                            </figure>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="images/exprience/contents4.PNG" alt="sns이미지_4">
+                                <p>#순진크림치즈빵 #크림치즈<br>크림치즈빵</p> <!-- *****이미지교체 : 순진크림치즈빵 -->
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+                <div class="btn"><button>See More</button></div>
+            </div>
+        </div>
+        <div class="for_gift">
+            <div class="inner_wrap">
+                <h1>For Gift</h1>
+                <p>Kakao , 카카오로 마음을 선물하세요</p>
+                <a href="#">더보기</a>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="images/kakao_gift/gift1.png" alt="gift01">
+                                <div class="text_box"><p class="title">2만원 교환권</p><p class="price">20,000</p></div>
+                            </figure>
+                        </a>
+                    </li><li>
+                        <a href="#">
+                            <figure>
+                                <img src="images/kakao_gift/gift2.png" alt="gift02">
+                                <div class="text_box"><p class="title">랑그드샤 쿠키</p><p class="price">17,500</p></div>
+                            </figure>
+                        </a>
+                    </li><li>
+                        <a href="#">
+                            <figure>
+                                <img src="images/kakao_gift/gift3.png" alt="gift03">
+                                <div class="text_box"><p class="title">3만원 교환권</p><p class="price">30,000</p></div>
+                            </figure>
+                        </a>
+                    </li><li>
+                        <a href="#">
+                            <figure>
+                                <img src="images/kakao_gift/gift4.png" alt="gift04">
+                                <div class="text_box"><p class="title">블루베리 라벤더 케이크</p><p class="price">23,000</p></div>
+                            </figure>
+                        </a>
+                    </li><li>
+                        <a href="#">
+                            <figure>
+                                <img src="images/kakao_gift/gift5.png" alt="gift05">
+                                <div class="text_box"><p class="title">생크림 케이크 1호</p><p class="price">29,000</p></div>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="contents">
+            <div class="inner_wrap">
+                <h1>Contents</h1>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <div class="circle"><img src="images/contents/Tourlesjours.png" alt="gift05"></div>
+                                <p>창업안내</p>
+                            </figure>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <div class="circle"><img src="images/contents/recruit..png" alt="gift05"></div>
+                                <p>채용안내</p>
+                            </figure>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <div class="circle"><img src="images/contents/CJ_one.png" alt="gift05"></div>
+                                <p>CJ one<br>Member</p>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div class="inner_wrap">
+                <ul class="information">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">이메일 무단집단거부</a></li>
+                    <li><a href="#">영상처리운영방침</a></li>
+                    <li><a href="#">창업안내</a></li>
+                </ul>
+                <div class="address">
+                    <p>상호명:CJ푸드빌(주) 주소:(우)04555 서울시 중구 마른내로34(초동 106-9번지)KT&G을지로타워 3, 9-11층 CJ푸드빌㈜<br>
+                        고객센터:1577-0700통신판매업종신고증 제 2011-서울중구-0771호사업자정보확인 호스팅제공자 : CJ올리브네트웍스(주)<br>
+                        사업자등록번호:312-81-42519대표이사:김찬호개인정보보호책임자:오창호 대표 이메일:help_master@cj.net
+                </div>
+            </div>
+            <div class="family_site">
+                <button>
+                    <span class="default">family site</span>
+                    <span class="down_icon">▼</span>
+                </button>
+                <div class="transparent">
+                    <ul>
+                        <li><a href="https://www.oliveyoung.co.kr" target="_blank">올리브영</a></li>
+                        <li><a href="https://www.cgv.co.kr" target="_blank">CGV</a></li>
+                        <li><a href="https://www.tving.com" target="_blank">Tving</a></li>
+                        <li><a href="https://www.ivips.co.kr" target="_blank">빕스 (vips)</a></li>
+                        <li><a href="https://www.cheiljemyunso.co.kr" target="_blank">제일제면소</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

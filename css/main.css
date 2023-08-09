@@ -1,0 +1,414 @@
+@charset "utf-8";
+
+
+
+/* popup */
+.popup{
+    position: fixed; top: 0; left: 0; z-index: 10000; 
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+.popup_wrap{
+    position: absolute; 
+    left: 0; right: 0; top: 0; bottom: 0;
+    width: 350px; height: 400px; margin: auto;
+    background-image: url(../images/Main/popup_bg.png);
+}
+.popup .p_notice{
+    position: relative; top: 190px; 
+    width: 100%; height: 400px; padding: 20px; 
+}
+.popup p{
+    width: 100%; height: 170px; padding: 10px;
+    background-color: rgba(255,255,255,0.5); 
+    font-size: 12px; line-height: 25px; color: #333; text-align: justify;
+}
+.popup p span{ color: #0957c3; font-size: 12px; }
+.popup .p_bottom a{ font-size: 14px; color: #fff; }
+.popup .p_bottom{
+    display: flex; /* 자손수평나열할 때 쓰기도 하지만, 정렬사용이 편해서도 사용 */
+    justify-content: center; align-items: center;
+    width: 100%; height: 50px; padding: 0 15px;
+    background-color: #E3A7A6;
+}
+.popup h4{
+    margin-bottom: 30px;
+    background-image: url(../images/main/popup_icon.png);
+    background-repeat: no-repeat; background-position: 96px center;
+    font-size: 24px; color: #333; text-transform: uppercase;
+}
+.popup img{
+    position: absolute; right: 30px; bottom: 65px;
+}
+.popup .p_right{
+    position: absolute; top: 0; right: -50px; 
+    width: 50px; height: 100px; padding: 10px;
+    background-color: #fff;}
+.popup .p_right a{
+    position: absolute; top: 10px; right: 10px;
+    writing-mode: vertical-lr} 
+.popup .p_right a .close1{
+    position: absolute; bottom: -12px; right: -1px;
+    content: '';
+    width: 15px; height: 1px; background-color: #999; rotate: 45deg;
+}
+.popup .p_right a .close2{
+    position: absolute; bottom: -12px; right: -1px;
+    content: '';
+    width: 15px; height: 1px; background-color: #999; rotate: 135deg;
+}
+.popup input{ position: absolute; top: 5px; left: 5px;}
+.popup label{
+    position: absolute; top: 25px; left: 5px;
+    writing-mode: vertical-lr; font-size: 8px; margin-right: 10px;}
+
+
+
+
+
+/* Main.css : 메인 페이지에 들어가는 공통부분을 제외한 파트 작성 */
+main{
+    width:100%; min-width: 1280px;; height: 700px; margin: 0 auto; 
+}
+
+main .swiper-slide img{
+    width: 100%; height: 700px; object-fit: cover;
+}
+main .swiper-pagination-bullet{background-color: #93272c;}
+
+
+
+/* our_touslesjours */
+.our_touslesjours{
+    width:100%; min-width: 1280px; height: 800px; padding: 150px 0;  box-sizing: border-box; margin: 0 auto;
+}
+
+
+/* select_btn */
+.select{
+    position: absolute; z-index: 5000;
+    width: 300px; height: 40px; margin: 10px 0; 
+}
+.select button{
+    width: 100%; height: 100%;
+    border: none; border-bottom: 2px solid #93272c; background-color: transparent;
+}
+button .default{ float: left; padding-left: 10px; color: #93272c; font-size: 14px;}
+button .down_icon{
+    float: right;
+    color: #93272c; font-size: 14px;
+    transition: .2s;
+}
+button.active .down_icon{
+    transform: rotate(180deg);
+}
+.gallery .tab_box {
+    display: none;
+}
+.gallery ul{
+    width: 100%; height: 180px; padding-top: 10px; display: block; 
+    background-color: #ededed; opacity: .8;
+}
+.gallery li{
+    width: 100%; height: 40px; 
+}
+.gallery a{
+    padding: 10px; 
+    font-size: 14px; line-height: 35px; color: #93272c;
+}
+.gallery a:hover{
+   font-weight: bolder;
+}
+.gallery .tab_box.active{
+    width: 100%; height: 300px; 
+}
+.gallery .btn{
+    width: 100%; height: 50px;
+}
+.gallery .btn li:last-child{ border-right: 0; }
+
+.gallery .btn a.active{ 
+    background-color: #333; color: #fff;
+}
+
+
+
+
+
+.our_touslesjours .best_swiper{
+    position: relative;
+    width: 1280px; margin-top: 120px; 
+}
+.our_touslesjours .best_swiper > div{
+    display: none; height: 350px;
+}
+.our_touslesjours .best_swiper > div.active{
+    display: block;
+    display: flex; justify-content: space-between;
+}
+.our_touslesjours .swiper-slide{
+    width: 230px; height: 260px;
+}
+.our_touslesjours .swiper-slide p{
+    font-size: 14px; line-height: 30px; text-indent: 10px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+.our_touslesjours .swiper-slide a:hover p{
+    color: #93272c; font-weight: 600;
+}
+.our_touslesjours .swiper-slide img{
+    display: block; margin: auto ;
+    width:100%; height: 230px;
+    border-top: 1px solid #93272c; border-bottom: 3px solid #93272c;} 
+.our_touslesjours .swiper-pagination{
+    position: absolute; bottom: 0;
+}
+.our_touslesjours .swiper-pagination-bullet{
+    width: 20px; height: 2px; margin: 0;
+    background-color: #93272c; border-radius: 0;transition: .2s;
+}
+.our_touslesjours .swiper-pagination-bullet-active{
+    width: 40px; height: 2px; 
+}
+
+
+
+
+
+
+
+
+/* icon_box */
+.icon_box{
+    width: 100%; min-width: 1280px; height: 270px; padding: 60px 0; box-sizing: border-box; 
+    background-color: #FEF0EE;
+}
+.icon_box ul{
+    display: flex; justify-content: space-between;
+}
+.icon_box li{
+    width: 125px; height: 160px;
+    vertical-align: bottom;
+    position: relative;
+}
+.icon_box li a{
+    display: block; 
+    width: 100%; height: 100%; 
+    background-repeat: no-repeat; background-position: center calc(50% - 15px); transition: .3s;
+}
+.icon_box ul li div{ 
+    font-size: 13px; line-height: 20px; text-align: center; position: relative; bottom: -110px;
+}
+
+.icon_box li:nth-child(1) a{ background-image: url(../images/common/map_gray.png);}
+.icon_box li:nth-child(2) a{ background-image: url(../images/common/mall_gray.png); }
+.icon_box li:nth-child(3) a{ background-image: url(../images/common/reserve_gray.png); }
+.icon_box li:nth-child(4) a{ background-image: url(../images/common/card_gray.png); }
+
+
+.icon_box li a:hover{background-repeat: no-repeat; background-position: center top ;}
+.icon_box li:nth-child(1) a:hover{background-image: url(../images/common/map_maincolor.png); }
+.icon_box li:nth-child(2) a:hover{background-image: url(../images/common/mall_maincolor.png); }
+.icon_box li:nth-child(3) a:hover{background-image: url(../images/common/reserve_main.png); }
+.icon_box li:nth-child(4) a:hover{background-image: url(../images/common/card_main.png);}
+ 
+
+
+
+
+
+
+
+
+/* taste */
+.taste{
+    width: 100%; min-width: 1280px; height: 680px; padding: 100px 0; box-sizing: border-box; margin: 100px auto;
+}
+.taste h1, .taste p{
+    color: white;
+}
+.taste .taste_box{
+    position: relative;
+    width: 100%; height: 100%;
+    display: flex;  justify-content: center;
+}
+.taste .left_taste, .taste .right_taste{
+    width: 960px; height: 100%;
+}
+.taste .left_taste{
+    background-image: url(../images/light_sweet/light.PNG); background-size: cover; background-position: center;
+   transition-delay: .5s;
+}
+.taste .right_taste{
+    background-image: url(../images/light_sweet/sweet.PNG); background-size: cover; background-position: center;
+    text-align: right;  transition-delay: .5s;
+}
+.taste .left_taste:hover{
+    background-image: url(../images/light_sweet/light.gif); 
+}
+.taste .right_taste:hover{
+    background-image: url(../images/light_sweet/sweet.gif); 
+    text-align: right;
+}
+
+.taste video{ width:100%; height: 100%;}
+.taste .teast_text_wrap{ position: absolute; top: 80px; z-index: 5000; }
+.taste .left_taste .teast_text_wrap{left: 80px;}
+.taste .right_taste .teast_text_wrap{right: 80px;}
+
+
+
+
+
+/* event */
+.event{
+    position: relative;
+    width:100%; min-width: 1280px; height: 655px; padding: 60px 0; margin: 50px auto; box-sizing: border-box;  
+    background-image: url(../images/event/event_banner.png);
+    background-repeat: no-repeat; background-size: cover;
+}
+/* .event .inner_wrap{ display:inline-block; position: absolute; height:200px; ;bottom: 0; background-color: pink;}
+.event .inner_wrap.active{top: 0; opacity: 1;} */
+.event .inner_wrap p{color: #ccc;}
+.event button{
+    width: 200px; height: 50px; margin-top: 30px;
+    background-color: #ece1cd;  border: none; border-radius: 10px;
+    text-align: center; line-height: 50px; font-size: 14px;
+}
+
+
+
+
+
+
+/* experience */
+.experience{
+    width:100%; min-width: 1280px; height: 800px; padding: 100px 0; margin: 50px auto; box-sizing: border-box; 
+}
+.experience ul{
+    display: flex; justify-content: space-between;
+}
+.experience ul li{
+    width: 305px; height: 305px; margin: 100px 0 35px;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+.experience figure{
+    width: 305px; height: 305px;
+    position: relative;
+    overflow: hidden;
+}
+.experience a img{
+    width: 100%; height: 100%; 
+}
+.experience a:hover img{
+    transform: scale(1.2); opacity: 0.3; transition: 0.3s;
+}
+.experience a:hover p{
+    width: 100%; height: 100%; line-height: 30px;
+    position: absolute; top: 140px; ; text-align: center; 
+}
+.experience .btn{
+    text-align: center; 
+}
+.experience button{
+    position: relative; 
+    width: 150px; height: 40px; border: 2px solid #93272c; border-radius: 5px;
+    line-height: 40px; color: #93272c; font-weight: bold; background-color: transparent; transition: .3s;
+}
+.experience button:before{
+    position: absolute; top: 0; left: 0;
+    content: ''; opacity: 0;
+    width: 5%; height: 37px; background-color: #93272c; z-index: -5000; transition: .3s ease-out;
+}
+.experience button:hover{color: white;}
+.experience button:hover:before{ opacity: 1; width: 100%; color: white; border: none;}
+
+
+
+
+
+
+
+/* for_gift */
+.for_gift{
+    position: relative;
+   width:100%; min-width: 1280px; height: 650px; padding: 60px 0; margin: 0 auto; box-sizing: border-box; 
+    background-image: url(../images/kakao_gift/background_50.png); background-size: cover;
+    background-repeat: no-repeat; 
+}
+.for_gift .inner_wrap > a{
+    position: absolute; top: 200px; right: 230px;
+    line-height: 30px; 
+    transition: .2s;
+}
+.for_gift .inner_wrap > a:hover{
+    color: #93272c; 
+}
+.for_gift ul{
+    display: flex; justify-content: space-between; 
+}
+.for_gift ul li{
+    position: relative; overflow: hidden;
+    width: 240px; height: 300px; margin-top: 80px;
+    background-color: pink;
+}
+.for_gift  li img{
+    width: 100%; height: 100%; display: block; 
+}
+.for_gift li .text_box{
+    position: absolute; bottom: 0;  
+    width: 100%; height: 0px; padding: 130px 10px 0;
+    background: linear-gradient(180deg, transparent,#e6d5c1); border-bottom: 5px solid #81623e;
+    font-size: 14px; line-height: 30px; 
+    opacity: 0; transition: .4s;
+}
+.for_gift li:hover .text_box{
+    width: 100%; height: 200px;
+    opacity: .7;}
+.for_gift li .text_box:hover .title{color: #333; }
+.for_gift li .text_box .price{ color: #000; font-size: 12px; font-weight: 600; text-align: right; }
+
+
+
+
+/* contents */
+.contents{
+    width:100%; min-width: 1280px; height: 550px; padding: 60px 0; box-sizing: border-box; margin: 60px auto;
+}
+.contents ul{
+    display: flex; justify-content: space-between; margin-top: 50px; 
+}
+.contents ul li{
+    position: relative; 
+    width: 300px; height: 300px; box-sizing: border-box; 
+}
+.contents .circle{
+    position: absolute; bottom: 0; right: 0;
+    width: 250px; height: 250px; border-radius: 50%; background-color: t;
+    background-color: #fff9e4;
+    padding-top: 20px; transition: .3s;
+   
+}
+.contents li img{
+    display: block; margin: auto; 
+    width: 200px; height: 200px; opacity: 0.3;transition: 0.3s;
+}
+.contents li p{
+    position: absolute; top: 130px; left: 0;
+    font-size: 30px; font-weight: 600; color: #999;
+    position: relative; transition: .3s;  
+}
+.contents li:hover .circle{ width: 300px; height: 300px;}
+.contents li:hover img{ width: 250px; height: 250px; opacity: 1;}
+.contents li:hover p{ position: absolute; top:0; color: #93272c;}
+ 
+
+
+
+
+
+
+
+
